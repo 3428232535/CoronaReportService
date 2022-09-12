@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-CoronaReportService-800740f2-1cae-4c6a-919e-130286dfb084</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="HtmlAgilityPack" Version="1.11.45" />
+	  <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+	  <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="6.0.0" />
+	  <PackageReference Include="Quartz.Extensions.Hosting" Version="3.4.0" />
+	  <PackageReference Include="Serilog.Extensions.Hosting" Version="5.0.1" />
+	  <PackageReference Include="Serilog.Settings.Configuration" Version="3.3.0" />
+	  <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+	  <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.Development.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="delete.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="start.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
