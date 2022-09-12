@@ -1,6 +1,6 @@
-﻿# 重庆大学今日校园打卡
+﻿# 打卡
 
-基于Quartz.NET的今日校园打卡程序
+基于Quartz.NET的今日**打卡程序
 
 ## 使用方法
 1. 下载最新的[Release](https://github.com/3428232535/CoronaReportService/releases/download/v1.0/CoronaReportService-V1_0.zip)
