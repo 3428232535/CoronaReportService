@@ -30,4 +30,13 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 #endregion
 
+#region RegisterAsSystemService
+
+if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+    builder.UseWindowsService();
+else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+    builder.UseSystemd();
+
+#endregion
+
 await builder.Build().RunAsync();

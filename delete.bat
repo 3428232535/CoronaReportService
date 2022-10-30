@@ -1,7 +1,11 @@
-sc stop CoronaReportService
-sc delete CoronaReportService
+chcp 65001
 set basePath=%~dp0%
-echo %basePath%
-cd %basePath%
+cd /D %basePath%
+for /f "delims=" %%i in ("%cd%") do set folder=%%~ni
+
+sc stop %folder%
+sc delete %folder%
+
+cd /D %basePath%
 rd /s /Q %basePath%
 pause
